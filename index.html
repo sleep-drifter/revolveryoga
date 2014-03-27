@@ -1,0 +1,696 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Revolver Yoga Studio</title>
+<meta name="author" content="Revolver Yoga" />
+<meta name="keywords" content="revolver yoga studio walla wa downtown local sustainable" />
+<meta name="description" content="Revolver Yoga Studio is a yoga studio located in historic downtown Walla Walla, WA. Whether your goal is to gain strength or flexibility, lose weight, quiet your mind, or learn to relax deeply, our experienced and highly trained instructors are here to serve you." />
+<link rel="stylesheet" href="css.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
+
+
+    <script>
+    $(document).ready(function(){
+	  $('nav a').click(function(){
+        $('#icon').toggleClass("hover");
+
+	  }); //end css
+	  
+    
+   });
+  	
+</script>
+<script>
+
+$(document).ready(function(){
+    $('#accordion h3').hover(function(){
+        $(this).stop().animate({
+            'left': '5px'
+        }, 200) 
+    }, function(){
+        $(this).stop().animate({
+            "left": '0px'
+        },500);
+        
+        
+        
+    });//end hover
+}); //end ready
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+window.onload = function () {
+	var styles = [
+  {
+    "featureType": "poi.business",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "poi.government",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "poi.medical",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "transit",
+    "stylers": [
+      { "invert_lightness": true },
+      { "weight": 0.1 },
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "road.local",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#838383" },
+      { "weight": 1.3 }
+    ]
+  },{
+    "featureType": "landscape",
+    "stylers": [
+      { "color": "#838383" }
+    ]
+  },{
+    "featureType": "road",
+    "stylers": [
+      { "color": "#d6b136" },
+      { "visibility": "simplified" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#ffffff" },
+      { "weight": 0.1 },
+      { "invert_lightness": true }
+    ]
+  },{
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#29ade2" }
+    ]
+  },{
+    "featureType": "poi.park",
+    "stylers": [
+      { "color": "#199a7c" }
+    ]
+  },{
+    "featureType": "poi.place_of_worship",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "landscape.man_made",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "weight": 8 },
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "landscape",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      { "invert_lightness": true },
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      { "weight": 0.1 },
+      { "visibility": "on" },
+      { "color": "#ffffff" }
+    ]
+  },{
+    "featureType": "administrative.province",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      { "color": "#ffffff" },
+      { "weight": 4.4 }
+    ]
+  },{
+    "featureType": "administrative.locality",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      { "color": "#ffffff" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      { "color": "#ffffff" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels.text",
+    "stylers": [
+      { "color": "#000000" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+	}
+];
+
+
+var options = {
+	mapTypeControlOptions: {
+		mapTypeIds: ['Styled']
+	},
+	center: new google.maps.LatLng(46.0662,-118.3400),
+	zoom: 17,
+	scrollwheel: false,
+	navigationControl: true,
+    mapTypeControl: false,
+    scaleControl: false,
+    draggable: true,
+	panControl: false,
+ 	zoomControl: false,
+	zoomControlOptions: {
+    style: google.maps.ZoomControlStyle.SMALL
+  },
+  
+	disableDefaultUI: true,	
+	mapTypeId: 'Styled'
+};
+var div = document.getElementById('map');
+
+var map = new google.maps.Map(div, options);
+var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
+map.mapTypes.set('Styled', styledMapType);
+var image = 'location.png';
+  var myLatLng = new google.maps.LatLng(46.06525,-118.3411);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+  });
+  
+var image2 = 'market.png';
+  var myLatLng2 = new google.maps.LatLng(46.0659,-118.3423);
+  var beachMarker2 = new google.maps.Marker({
+      position: myLatLng2,
+      map: map,
+      icon: image2
+  });
+}
+</script>
+
+<script type="text/javascript">
+function launchWS(winName) {
+yHeight = screen.height*.80
+//window height and width
+m; myWidth = 784; //widow height bounds
+} else if (myHeight>700
+if ( myHeight < 556 ) { myHeight = 556; ) { myHeight = 700;
+pos
+} //get screen size, and cacl center screen
+itioning var height = screen.height; var width = screen.width;
+- myHeight / 2) - 40; //open window
+var leftpos = width / 2 - myWidth / 2; var toppos = (height / 2
+msgWindow=window.open(winName,"ws_window","toolbar=no,location=no,directories=no,resizable=yes,menubar=no,scrollbars=no,status=yes,width="
+
++ myWidth + ",height="+ myHeight + ", left=" + leftpos + ",top=" + toppos); //focus window
+setTimeout('msgWindow.focus()',1); } </script> 
+
+</head>
+
+<body id="top">
+
+<div class="containerz">
+<div id="class_finder"></div>
+<div id="inst_finder"></div>
+    <div class="placeholder">
+        <h1>
+        <img src="_images/header_logo.png" id="headerimg">
+        </h1>
+    </div>
+<!--    ////////////////////////////// Navigation  //////////////////////////////   -->    
+
+	<nav>
+    	<div class="logo_holder">
+        	<a href="#top"><img id="icon" src="_images/logo.png"></a>
+        </div>
+		<div class="list_holder hover_animate">
+    <a id="fb" target="blank" href="https://www.facebook.com/RevolverYoga"><img src="_images/fb.png"></a>
+        <a id="schedule_button" target="blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week"></a>
+
+            <ul>
+                <li><span class="arrow"></span><a href="about.html#about_finder">About</a></li>
+                <li><a href="#class_finder">Classes</a></li>
+                <li><span class="arrow"></span><a href="about.html#ns">New Students</a></li>
+                <li><a href="#inst_finder">Instructors</a></li>
+                <li><a href="#contact">Location</a></li>
+                <li><a href="#bottom">Contact</a></li>
+<!--                 <li><a href="#" id="nav_sign_up">Sign up!</a></li>                                  
+ -->            </ul>
+        </div>
+<!--        <a href="#bottom"><img id="menu"src="img/nav.png"></a>
+-->            	 
+    </nav>
+    
+<!--    ////////////////////////////// Sidebar Animations  //////////////////////////////   --> 
+
+<div id="signup_sidebar">
+	<p>Sign up for a class today</p>
+    <p><a href="#">View Class Schedule</a></p>
+    <span id="close">[ x ]</span>
+
+</div>  
+
+
+<!--    ////////////////////////////// MISSION//////////////////////////////   -->    
+ 
+   		<article id="mission">
+        	<p class="quote">Revolver Yoga Studio’s experienced, highly trained instructors aim to provide the highest possible standard in quality yoga teaching. We want you to have an incredible experience every time you come to class. Whether your goal is to gain strength or flexibility, lose weight, quiet your mind, or learn to relax deeply, our instructors are here to serve you.</p>
+
+        	<p class="quote2">Pre-registration for most classes is not required. Please sign up online for the 6am classes by 10pm the evening before. New students will need an extra few minutes to fill out a waiver. We look forward to seeing you at the studio!</p>
+            <div class="button"><a href="about.html">Learn More</a></div><br><br>
+        </article>
+
+<!--    ////////////////////////////// Slideshow //////////////////////////////   --> 
+
+<div class="container">
+    <div id="slides">
+      <img src="_images/studioshot.jpg" >
+      <img src="_images/window.jpg" >
+      <img src="_images/cactus.jpg" >
+      <img src="_images/lounge.jpg" >
+      <img src="_images/propsshot.jpg" >
+      <img src="_images/reception.jpg" >
+    </div>
+  </div>   
+
+
+<!--    ////////////////////////////// Instructors //////////////////////////////   -->    
+
+        
+        <article id="instructors">
+        	<h1 style="font-weight:300;">INSTRUCTORS</h1>
+
+
+				            <div id='mySwipe' style="max-width:50em; margin:0 auto;" class='swipe'>
+								<div class='swipe-wrap'>
+								    <div>
+										<img src="_images/court.png" id='instructor1'></img>  
+								    		<h2>Courtney, Owner & Instructor</h2>
+								    		<h3>YogaWorks, New York, NY</h3>
+								    		<h4>Motto: Do it for Savasana.</h4>
+								    		<hr>
+							            		<p>
+										            Trained in the YogaWorks method, which combines Ashtanga and Iyengar traditions, Walla Walla native Courtney aims to help students cultivate more awareness through breath and movement while keeping them safe with proper alignment. After studying with many of New York and Seattle’s most loved and influential teachers during her time in both cities, she leads her students through well-balanced practices which are challenging both physically and mentally, opening the body and heart for a better life.
+										            </p>
+									</div>
+								    <div>
+									    <img src="_images/chrissy.png" id='instructor2'></img>  
+									    		<h2>Chrissy, Instructor</h2>
+									    		<h3>The Movement Center, Portland, OR</h3>
+									    		<h4>Motto: Practice with passionate calm - Enrich Schiffmann</h4>
+									    		<hr>
+								            		<p>
+											           Chrissy's love for yoga brought her all the way from the Midwest to the Pacific Northwest to attend a Hatha yoga teacher training program at The Movement Center in Portland, Oregon. Her training provided the foundation for a style focused on establishing a deep connection to oneself, centering the body and mind, and skillful knowledge of breath awareness and alignment. Her classes teach students to find the strength in their own bodies while releasing tensions for a greater sense of peace and vitality.
+											            </p>
+									</div>
+
+
+                    <div>
+                      <img src="_images/robin.jpg" id='instructor3'></img>  
+                          <h2>Robin, Instructor</h2>
+                          <h3>Seema Sondhi at The Yoga Studio, New Delhi.</h3>
+                          <h4> "Ninety nine percent practice; one percent theory."<br>—Sri K. Pattabhi Jois</h4>
+                          <hr>
+                                <p>
+                                 Robin Hamilton Brodt has taught vinyasa yoga in Walla Walla for ten years. Robin has studied in Seattle, Portland, Palm Springs, Dallas and in New Dehli, India, where the die was cast. She also has injuries from other athletic endeavors, and believes that with modifications, breath, and a sense of humor, all is coming. 
+                                  </p>
+                  </div>
+
+<div>
+	<img src="_images/tara.png" id="instructor4" />
+	<h2>Tara, Instructor</h2>
+	<h3>Peace Through Yoga, Indianapolis, IN</h3>
+	<hr />
+	<p>After practicing yoga for nearly twenty years, Tara decided to complete the Teaching Training Program at Peace Through Yoga in Indianapolis, Indiana. Tara's teaching experience ranges from vinyasa classes to pre-natal yoga, as she is also a graduate of Blooma's nationally-recognized Pre-Natal Yoga Teaching Training Program. Tara invites you to come to the mat as you are and to take the mindfulness and presence you cultivate in your practice beyond the mat.</p>
+</div>
+								    <div>
+								    <img src="_images/rhonda.png" id='instructor5'></img>  
+									    		<h2>Rhonda, Instructor</h2>
+									    		<h3>Discovery Yoga Center, St. Augustine, FL</h3>
+									    		<hr>
+								            		<p>
+											            Rhonda is a certified Kripalu yoga teacher, an approach to asana practice that emphasizes meditation and breathwork, and encourages inward focus. With a background in Psychology, Rhonda finds yoga to be an exceptional system for self improvement. Rhonda's intention is to help others attain the many benefits that come through a regular practice of quieting a busy mind and making space for openness, patience and creativity.
+											            </p>
+									</div>
+								</div>
+							</div>
+
+				           	<div style='text-align:center;padding-top:20px;'>
+				  
+								  <div id="prev" onclick='mySwipe.prev()'></div> 
+								  <div id="next"onclick='mySwipe.next()'></div>
+
+							</div>    
+
+        </article>
+        <h1 id="class" class="subject_header">Classes</h1>
+        <article id="classes">
+
+            <div id="accordion">
+                <h3> Level 1</h3>
+	                  <div class="acc1x">
+	                    <p>
+	                   Whether you have never been into a yoga studio or need a refresher, our Level 1 class will help you learn proper posture alignment and the fundamentals of yoga in a supportive, lighthearted environment.
+	                    </p>
+	                    	<br>
+	                    		<div class="button"><a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">Sign up!</a></div>
+                  </div>
+                  <h3> Level 1/2</h3>
+	                  <div class="acc1x">
+	                    <p>
+	                    A great class designed for those who need special attention to back strengthening, shoulder care, and tight hamstrings. A slower-paced class with less vinyasas but plenty of strength. Suitable for those who are new, have taken a few yoga classes, or those who just like a slower paced class.
+	                    </p>
+	                    	<br>
+	                    		<div class="button"><a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">Sign up!</a></div>
+                  </div>
+                  <h3> Level 2</h3>
+                  		<div class="acc2x">
+	                        <p>
+	                        Our signature intermediate class, built on the Ashtanga and Iyengar schools, intended to help guide students deeper into their practice. More advanced postures such as arm balances and inversions are introduced, as well as a moderate pace and more challenging sequencing. This class is designed to build strength, get your heart pumping, and leave you radiating energy.
+	                        </p>
+                    			<br>
+                    				<div class="button"><a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">Sign up!</a></div>
+                  </div>
+                    <h3> Restorative / All Levels</h3>
+                  		<div class="acc1x">
+		                    <p>
+		                    Slow-paced and smooth like honey, this practice is designed to restore the parasympathetic nervous system and help release deeply held tensions from the body and mind. We use props to support the postures, while gently stretching and strengthening the body.
+		                    </p>
+	                    		<br>
+	                    			<div class="button"><a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">Sign up!</a></div>
+                  		</div>
+		<h3>Power Flow</h3>
+		<div>
+			<p>Free your practice! This strong flow class is fast-paced and allows for students to add in arm balances, inversions, and variations as they wish. While the postures are appropriate for level 1-2 students, level 2 and up are encouraged to make the practice their own. No judgement allowed, just the space and time to practice your practice.</p>
+			<br />
+			<div class="button"><a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">Sign up!</a></div>
+		</div>
+		<h3>Parent &amp; Kids Yoga</h3>
+		<div>
+			<p>Providing parents a unique opportunity to practice yoga in a setting where they can bring their children, this level 1-2 class offers yoga poses, stretching, core-strengthening and relaxation for parents as well as a community of other parents to offer perspective and support on your parenting journey. You are welcome to place babies next to you and we encourage your ambulatory children to join in class! Please bring bouncy chairs, blankets, quiet toys, etc. for your children to keep them entertained if they do not wish to participate.</p>
+			<br />
+			<div class="button"><a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">Sign up!</a></div>
+		</div>
+		<h3>Meditation &amp; Pranayama</h3>
+		<div>
+			<p>Deepen your yoga practice with led meditation and pranayama (breathing techniques). Both practices are fantastic for reducing anxiety, lowering blood pressure, and generally bringing more awareness to your body and mind.</p>
+			<br />
+			<div class="button"><a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">Sign up!</a></div>
+		</div>
+		<h3>Gentle Yoga</h3>
+		<div>
+			<p>Designed for those of you with orthopedic injuries (old or new) who need less Chaturanga and more specific stretchy and gentle strengthening goodness!</p>
+			<br />
+			<div class="button"><a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">Sign up!</a></div>
+		</div>
+                   <h3 style="font-style:italic;"> Tuition and Membership</h3>
+                  <div id="tuition_anchor">
+                    
+                	<ul>
+                    	<li>Annual Unlimited - $1100</li>
+                        <li>Auto Monthly Unlimited - $99 (six month contract)</li>
+                        <li>Monthly - $120</li>
+                        <li>10-Class Card - $120 (six month expiration)</li>
+                        <li>Single Class - $17</li>
+                        <li>Student Class - $10*</li>
+			<li>Auto Student Monthly Unlimited - $75 (three month contract)*</li>
+                        <li>New Student Week Unlimited- $25</li>
+                        <li>Private Session - $75/60 minute or $110/75 minute</li>
+                    </ul>
+                    <p>* Must present valid student I.D. and proof of current enrollment</p>
+                	<br>
+                	<div class="button"><a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">Sign up!</a></div>
+                  </div>
+            </div>
+            
+<!--            <div id="tuition">
+                <div id="prices">
+                	<ul>
+                    	<li>Annual Unlimited - $1100</li>
+                        <li>Auto Monthly Unlimited - $99 (six month contract)</li>
+                        <li>Monthly - $120</li>
+                        <li>10-Class Card - $120 (six month expiration)</li>
+                        <li>Single Class - $17</li>
+                        <li>Student Class - $10</li>
+                        <li>New Student Week Unlimited- $25</li>
+                        <li>Private Session - $75/60 minute or $110/75 minute</li>
+                    </ul>
+                	</div>
+                    <div id="tuition_inner"> 
+                        tuition & memberships
+               </div>
+            </div>
+-->                
+                <script>
+				
+					$(document).ready(function () {
+						$("#prices").hide();
+						$('#tuition').click(function () {
+							$("#prices").fadeIn();
+						});
+					});
+				
+				</script>
+        </article>
+        
+        
+<!--        <article id="benefits">
+        	<h1>Benefits</h1>  
+            	<div class="benefits">
+                <p>Though the benefits of Yoga are individual, these are a few of the many wonderful advantages that a consistent Yoga practice can provide:
+                </p>
+                	
+                    <div>
+                    	<h2>Column 1</h2>
+                    	<img src="icon-01.png">
+                    </div>
+
+					<div>
+                    	<h2>Column 2</h2>
+                    	<img src="icon-02.png">
+                    </div>
+
+					<div>
+                    	<h2>Column 3</h2>
+                    	<img src="icon-03.png">
+                    </div>
+
+                     <div>
+                        <h2>Column 2</h2>
+                        <img src="icon-01.png">
+                    </div>
+
+                    <div>
+                        <h2>Column 3</h2>
+                        <img src="icon-02.png">
+                    </div>
+
+                    <div>
+                        <h2>Column 1</h2>
+                        <img src="icon-03.png">
+                    </div>                                      
+              
+                
+  				</div>      
+        </article>-->
+        
+        <article  id="contact">
+        	<h1>CONTACT INFO</h1>
+
+	<div id="map"></div>
+
+                    <p style="max-width:800px; margin:0 auto; font-size:1.25em; font-weight:300;">
+                Revolver is located in Downtown Walla Walla, offering daily yoga classes taught by experienced, diverse, and highly trained instructors. Our quiet, light-filled studio features a tea lounge with fresh, organic herbal teas for pre and post class relaxation and community. Our small retail area offers Manduka and Jade yoga mats as well as other yoga accessories.
+                    </p>
+                    <p style="max-width:800px; margin:0 auto; font-size:1.25em; font-weight:300;"> Revolver Yoga Studio is located at 4 South 4th St. in downtown Walla Walla. We encourage you to ride your bike, walk, or carpool to class, though street parking is readily available.
+We are open seven days a week. For a live schedule including teacher substitutions and cancellations, or to reserve a spot in class, <a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">click here</a>. All classes are 75 minutes.</p><br>
+                
+        </article>
+    
+<!--    ////////////////////////////// Footer Below  //////////////////////////////   -->    
+</div>
+    <footer id="bottom">
+    	<div class="col-group">
+        	<div>
+        		<h2>About</h2>
+                	<ul>
+                    	<li><a href="#inst_finder">Instructors</a></li>
+                        <li><a href="#mission">Mission</a></li>
+                        <li><span class="arrow"></span><a href="about.html#ns"><a href="about.html#action">Action</a></li>
+                        <li><a href="#contact">Location</a></li>
+                    </ul>
+       		</div>
+            
+        	<div>
+          		<h2>Classes</h2>
+                	<ul>
+                    	<li><a href="#class_finder">Tuition & Costs</a></li>
+                        <li><a href="#class_finder">Schedule</a></li>
+                        <li><a target="_blank" href="http://clients.mindbodyonline.com/ws.asp?studioid=43881&stype=-7&sView=week'">Sign up</a></li>
+                    </ul>
+        	</div>
+            
+            <div>
+        		<h2>New Student</h2>
+                	<ul>
+                    	<li><span class="arrow"></span><a href="about.html#ns">Myths</a></li>
+                        <li><span class="arrow"></span><a href="about.html#ns">Benefits</a></li>
+                        <li><span class="arrow"></span><a href="about.html#ns">Etiquette</a></li>
+                        <li><span class="arrow"></span><a href="about.html#ns">Forms and Waivers</a></li>
+                    </ul>
+       		</div>
+            
+        	<div>
+          		<h2>Contact</h2>
+                	<p>Revolver Yoga Studio</p>
+                    <p>4 S. 4th Avenue</p>
+                    <p>Walla Walla, WA 99362</p>
+                    <p>509.520.3131</p>
+                    <a href="#">www.revolveryoga.com</a>
+                    <a href="mailto:info@revolveryoga.com">info@revolveryoga.com</a>
+        	</div>
+            
+            <div id="copyright">
+            <p>&copy; 2013 Revolver Yoga Studio. All Rights Reserved.
+            <br>
+            Website design by <a style="color:#aaa"href="http://xarts.usfca.edu/~mwujek/index.php">Matt Wujek</a></p>
+            </div>
+      
+      
+    
+    	</div>
+    </footer>
+    
+    
+
+<script>
+  $(function() {
+    $( "#accordion" ).accordion({active: false, collapsible: true, autoHeight: false, heightStyle: "content"});
+  });
+  </script>
+  
+  <script>
+$(document).ready(function(){  
+  $(window).scroll(function () {
+		if ($(this).scrollTop() > 750) {
+			$('#signup_sidebar').animate({
+				left:'0em'},
+				1500,
+				'easeOutBounce');
+		} else {
+			$('#slideshow').fadeOut();
+		}// end animate
+	}); //end scroll
+	
+$('#close').click(function(){
+	$('#signup_sidebar').hide();
+	});//end click
+});
+</script>
+  <script src="js/jquery.slides.min.js"></script>
+
+<script>
+    $(function() {
+      $('#slides').slidesjs({
+        navigation: {
+      active: false,
+        // [boolean] Generates next and previous buttons.
+        // You can set to false and use your own buttons.
+        // User defined buttons must have the following:
+        // previous button: class="slidesjs-previous slidesjs-navigation"
+        // next button: class="slidesjs-next slidesjs-navigation"
+    },
+        play: {
+      effect: "fade",
+        // [string] Can be either "slide" or "fade".
+      interval: 5000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: true,
+        // [boolean] Start playing the slideshow on load.
+      swap: false,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: true,
+        // [boolean] pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    },
+
+        width: 940,
+        height: 408,
+
+      });
+    });
+  </script>
+  
+  <script src="js/waypoints.js"></script>
+<script src="js/waypoints-sticky.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('nav').waypoint('sticky');
+});
+</script>
+<script>
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
+</script>
+<script src='js/swipe.js'></script>
+
+<script>
+
+// pure JS
+var elem = document.getElementById('mySwipe');
+window.mySwipe = Swipe(elem, {
+  // startSlide: 4,
+  // auto: 3000,
+  // continuous: true,
+  // disableScroll: true,
+  // stopPropagation: true,
+  // callback: function(index, element) {},
+  // transitionEnd: function(index, element) {}
+});
+
+// with jQuery
+// window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
+
+</script>
+
+</body>
+</html>

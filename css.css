@@ -1,0 +1,823 @@
+/*////////////////////// Reset Styles //////////////////////*/
+
+
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+}
+
+body{
+	width:100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+.containerz{
+	max-width: 60em; margin: 0 auto; min-width: 47.5em; background-color: #fff; box-shadow: #555 0 0 5px;
+}
+
+img{max-width: 100%; height:auto;}
+
+p>a:visited{color:blue;}
+
+/*////////////////////// Article Styles //////////////////////*/
+
+.button{
+	padding:1em;
+	background-color:#D6B035;
+	text-align:center;
+	font-weight: 300;
+	margin:0 auto;
+	max-width:10em;
+	color:#fff;
+}
+
+.button a, .button a, .button a:visited{
+	text-decoration: none;
+	color:#fff;
+}
+.col-group h2, .subject_header{
+	position:relative;
+	padding-bottom: 0.15em;
+	border-bottom:1px solid #D6B035;
+	text-transform:uppercase;
+	margin: 1em 0 0 0 ;
+	font-weight: 300;
+}
+
+.subject_header,article > h1{
+	text-align:center;
+	font-size:3em;
+
+}
+
+
+article{
+	padding:0em;
+	margin:0em;
+	position:relative;
+	width:100%;
+}
+
+article h1, article p, article img{
+	text-align:center;
+}
+
+strong{font-weight: bolder;}
+
+/*////////////////////// Animated Sidebar Styles //////////////////////*/
+
+#signup_sidebar{
+	background-color:#D6B035;
+	position:fixed;
+	top:15em;
+	padding:1em 3em 1em 1em;
+	margin:0;
+	text-indent:1em;
+	font-size:0.75em;
+	line-height:2em;
+	z-index:100;
+	left:-20em;
+	box-shadow: 0 3px 15px 0 #333;
+	display: none;
+}
+
+#signup_sidebar p:first-child{
+	text-transform:uppercase;
+	font-weight:bolder;
+	
+}
+
+#signup_sidebar a{
+	color:#fff;
+	text-decoration:none;
+	letter-spacing:0.1em;
+}
+
+#signup_sidebar a:hover{
+	text-decoration:underline;
+}
+
+#close{
+	position:absolute;
+	top:5px;
+	right:10px;
+	color:white;
+}
+/*////////////////////// Navigation Styles //////////////////////*/
+
+
+
+nav img{
+	margin:1em 0 0 0;
+}
+
+#fb, #schedule_button{margin: 0;position: absolute; right:-50px; top:1px; padding:0; margin: 0;}
+#schedule_button{top:80px; right:-25px; width:155px; height: 70px; background: url(_images/schedule.png); background-position: 0px 0px;}
+#fb:hover{opacity: 0.7;}
+#schedule_button:hover{background-position: 0px 70px;}
+
+#menu{
+	position: fixed;
+	top:0;
+	right:1em;
+}
+
+nav{
+	position:relative;
+	margin:0;
+	padding:0;
+	width:100%;
+	background-color:#ccc;
+	z-index:100;
+	height:4em;
+	box-shadow: 0 0 1px #aaa;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+div.logo_holder{
+	float:left;
+	display: inline-block;
+	position:relative;
+	width:8%;
+	height:4em;
+	background-color:#ccc;
+	text-align:center;
+}
+
+#icon{
+	padding:0;
+	position: relative;
+	margin: 0 auto;
+	margin-top:0.4em;
+	line-height:4em;
+}
+
+div.list_holder{
+	height:4em;
+	float:right;
+	width:92%;
+	background-color:#fff;
+}
+
+nav.stuck {
+		position:fixed;
+		width:60em;
+		top:0;
+	}
+
+nav ul{
+	float: left;
+	list-style:none;
+	text-align:left;
+	padding:0;
+	margin: 0;
+	width:100%;
+	display: table;
+
+}
+
+
+nav li>a{
+	text-decoration:none;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color:#aaa;
+	margin:0;
+	padding:0;
+}
+
+nav li{
+	display:table-cell;
+	width:auto;
+	padding:0;
+	margin: 0;
+	height: 4em;
+	line-height: 4em;
+	border-right: #ddd 1px solid;
+	padding:0 0.5em;
+	text-align: center;
+
+	background: none;
+	z-index: 100;
+	position: relative;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+nav li>a:after{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	color:#fff;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
+}
+/* TRANSITION EFFECT */
+nav li>a:after, .button:after {
+	width: auto;
+	display: inline;
+	height: 0;
+	top: 0;
+	left: 0;
+	background-color: #D6B035;
+}
+nav li a:active{
+	opacity: 0.5;
+}
+nav li:hover,
+ .button:hover, .button:active {
+	color: #000;
+	background-color: #D6B035;
+}
+
+nav li a:hover:after,
+nav li a:active:after, .button:hover:after, .button:active:after {
+	height: 100%;
+}
+nav li a:last-child{
+	border: none;
+}
+
+
+nav li>a:hover, .button{
+	transition: all 0.3s ease-out;
+	color:#000;
+	
+}
+
+#nav_sign_up{
+	background-color:#D6B035; padding:0.5em; color:#fff; border-radius:10px; content: 0;
+}
+
+
+
+.hover{ -webkit-animation-name: rotate; 
+    -webkit-animation-duration: 1s; 
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+	-webkit-transform-origin: 50% 50%;
+
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 1s; 
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in-out;
+	
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(180deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(180deg);}
+}
+
+/*////////////////////// Header Image Styles //////////////////////*/
+
+
+.placeholder{
+	padding:1em;
+	height:30em;
+	text-align:center;
+	color:#fff;
+	background:url(_images/frontdoor.jpg)  center center;
+	max-width: 60em;
+	margin: 0 auto;
+}
+
+#headerimg{
+	margin: 5em 0 0 0;
+}
+
+
+
+
+/*////////////////////// Mission Styles //////////////////////*/
+
+#mission{
+		background:url(_images/wood.jpg) fixed center;
+}
+
+.quote, .quote2{
+	text-indent: 1.5em;
+	color:#fff;
+	font-size:1.5em;
+	font-weight: 300;
+	line-height:1.5em;
+	letter-spacing: 0.04em;
+	padding:5em 1em 2em 1em;
+	margin:0 auto;
+	text-align:left;
+	max-width:800px;
+	display: relative;
+}
+
+.quote2{ padding:0 1em 2em 1em;}
+
+/*////////////////////// The Space (Slideshow) Styles //////////////////////*/
+
+.slidesjs-pagination {
+      margin: 1em auto;
+      text-align: center;
+      list-style: none;
+    }
+
+ .slidesjs-pagination ul {
+      margin: 0 auto;
+      text-align: center;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      display:inline-block;
+      margin: 0 1em;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 30px;
+      height: 0;
+      padding-top: 30px;
+      background-image: url(_images/pagination-01.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -30px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -60px
+    }
+
+
+/*////////////////////// Instructors Styles //////////////////////*/
+
+#instructors{
+	text-align: center;
+	font-weight: 300;
+	}
+
+
+#instructors img{
+	margin: 1em auto;
+	text-align: center;
+}
+
+#instructors p{
+	text-indent: 2em;
+	font-size:1.25em;
+	line-height: 1.5em;
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: left;
+	padding:1em;
+}
+
+#instructors h2{
+	margin: 0;
+	padding: 0;
+}
+
+#instructors h3{
+	color:#aaa;
+	margin:0.5em;
+}
+
+#instructors h4{
+	font-style: italic;
+	font-weight: lighter;
+	color:#aaa;
+	margin:0.25em 0 1em 0;
+}
+
+/*  Swipe Instructors*/
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+#instructors h2, #instructors h3, #instructors h4{
+	font-weight: 400;
+}
+
+#prev{background: url('_images/prev.png') center no-repeat; width:50px; height: 100px; position: absolute; top:12em; left:0;}
+#next{background: url('_images/next.png') center no-repeat; width:50px; height: 100px; position: absolute; top:12em; right:0;}
+
+#prev:hover, #next:hover{opacity: 0.5;}
+/*////////////////////// Benefits Styles //////////////////////*/
+
+.benefits{
+	text-align:center;
+}
+
+.benefits h2{
+	font-size: 1em;
+}
+
+.benefits p{
+	padding: 1em;
+	text-indent: 2em;
+	text-align: left;
+	line-height: 1.5em;
+
+
+}
+
+.benefits > div {
+	width:33%;
+	float:left;
+}
+
+.benefits span{
+	width:50px;
+	height:50px;
+	background-color:red;
+}
+
+@media screen and (max-width: 50em) {
+  .benefits {
+    overflow: hidden;
+  }
+  .benefits > div {
+    float: left;
+    width: 50%;
+  }
+}
+/*////////////////////// Classes Accordian //////////////////////*/
+
+
+
+#classes{
+	width:100%;
+	margin: 0;
+	padding:2em 0 3em 0;
+	background: #D6B035;
+}
+
+#accordion{
+	max-width:800px;
+	margin:0 auto;
+	position:relative;
+}
+
+
+#accordion h3{
+	cursor: pointer;
+	font-weight: normal;
+	border-bottom: 1px solid #424342;
+	text-align:left;
+	position: relative;
+	padding:1em 0 1em 2em;
+	margin:0;
+	color:#424342;
+	font-weight: 300;
+/*	background: -webkit-linear-gradient(top, #D6B035, #DAB849);
+*/}
+
+#accordion h3:focus, a:focus{outline:0;}
+
+#accordion h3:hover{
+	opacity:0.9;
+}
+
+
+#accordion>div{
+	background-color:#fff;
+	padding:2em;
+	height:auto;
+}
+#accordion>div:last-of-type ul{list-style: none;}
+#accordion>div:last-of-type li{margin:0.5em 0;}
+
+#classes>#accordion p, #classes>#accordion ul{
+	text-align:left;
+	line-height:1.5em;
+	text-indent: 2em;
+	max-width:600px;
+}
+
+#accordion p{
+	margin:0 auto;
+	font-weight: 300;
+	letter-spacing: 0.06em;
+}
+
+#tuition{
+	position:relative;
+	max-width:800px;
+	background-color:red;
+	margin:3em auto 0 auto;
+	height:350px;
+	background:url(_images/tuition.jpg) center;
+}
+
+#tuition_inner{
+	position:absolute;
+	left:0;
+	width:250px;
+	height:250px;
+	background-color:#fff;
+	border-radius:350px;
+	text-align:center;
+}
+
+#prices{
+	position:absolute;
+	right:0;
+	height:350px;
+	width:450px;
+	background-color:red;
+}
+
+#prices ul{
+	list-style:none;
+}
+#tuition_anchor ul{ margin: -0.5em 0 0 0;}
+
+
+#tuition_anchor li{
+	margin-bottom: 0.25em; text-indent: 0; font-weight: 300;
+}
+#tuition_anchor p{
+	text-align: left;
+	margin-left: 0;
+	margin-top: 0.5em;
+	font-size: 0.8em;
+	font-weight: 300;
+}
+
+.acc_p p {max-width: 100%; margin-top: 1em; padding:0;}
+
+.acc_p{margin: 0; padding:1em; margin-top: 0; overflow: auto;}
+
+.acc1x{
+	max-height: 11em; height: 11em;
+}
+
+.acc2x{
+	max-height: 13em; height: 13em;
+}
+
+
+/*////////////////////// Contact Us Styles //////////////////////*/
+
+
+#contact{
+	position:relative;
+
+}
+#contact div{
+	text-align:left;
+}
+
+#contact p{
+	text-align:left;
+	padding: 1em;
+	text-indent: 2em;
+	line-height: 1.5em;
+
+}
+
+#contact img{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#contact h1{
+	font-weight: 300;
+}
+#contact_info{
+	width:50%;
+	line-height:1.5em;
+	}
+
+#map{
+	position:relative;
+	background-color:#D6B035;
+	margin:1em auto;
+	height:500px;
+	max-width:60em;
+	cursor: progress;
+}
+
+/*////////////////////// Footer Styles //////////////////////*/
+
+.col-group{
+	padding: 2em 0;
+	margin:0 auto;
+	max-width:60em;
+}
+
+.col-group > div {
+  padding: 1em;
+}
+@media screen and (min-width: 44em) {
+  .col-group {
+    overflow: hidden;
+	
+  }
+  .col-group > div {
+    float: left;
+    width: 40%;
+  }
+  .col-group > div:nth-child(odd) {
+    clear: left;
+  }
+}
+@media screen and (min-width: 64em) {
+  .col-group > div {
+    width: 21%;
+  }
+  .col-group > div:nth-child(odd) {
+    clear: none;
+  }
+}
+
+/* end layout of footer*/
+
+footer a, footer li{
+	text-decoration:none;
+	list-style: none;
+	font-weight: 100;
+	color:#ccc;
+	padding:0.5em 0;
+	position: relative;
+}
+
+footer a:hover{
+	color:#fff;
+}
+
+.col-group h2 {
+	margin-bottom:1em;
+	font-size:1em;
+	color:#ffffff;
+}
+
+footer{
+	margin-top:2em;
+	background-color:#424342;
+	color:#ccc;
+	width:100%;
+	position: relative;
+}
+
+footer p{
+	line-height:1.5em;
+}
+
+#copyright{
+	font-size:0.75em;
+	clear:both;
+	text-align:center;
+	width:100%;
+	margin:4em 0 0 0;
+	color:#666;
+}
+
+/* ABOUT US AND NEW STUDENTS*/
+
+#about_us p, #new_students p, #action p{
+	max-width: 800px;
+	font-weight: 300;
+	text-align: left;
+	text-indent: 2em;
+	line-height: 1.75em;
+	margin: 0 auto;
+	font-size: 1.25em;
+}
+
+#action p{padding-bottom: 4em;}
+
+#new_students p{margin: 0 auto 2em auto;}
+}
+
+.myth, .myth_busta {margin:0 0 -1em 0; text-indent:0; font-style: italic; padding: 0;}
+
+.myth{margin:1em 0 0 0;}
+
+#new_student_accordion>#accordion>div{overflow:auto; background-color: #D6B035; text-align: left; padding:2em 5em 0 5em; line-height: 1.75em; max-height: 200px;}
+
+#new_student_accordion p{text-align: left;}
+
+#new_student_accordion>#accordion>#myths {max-height:60em; height:57em;}
+#new_student_accordion>#accordion>#etiquette {max-height:40em; height:40em;}
+
+#new_student_accordion>#accordion>#benefitsofyoga{max-height:24em; height:24em;}
+
+/*////////////////////// MISC and markers //////////////////////*/
+
+#ns,#class_finder, #inst_finder, #about_finder{
+	position: absolute;
+	top:90em;
+	height: 1em;
+	width: 1em;
+}
+
+#inst_finder{
+	top:90em;
+}
+#about_finder{
+	top:50em;
+}
+
+#class_finder{
+	top:142em;
+}
+
+.arrow{
+	width:20px; height: 20px; background: url(_images/arrow2.png) center center no-repeat; z-index: 101; position: absolute; top: 1.4em; right:0.2em;
+}
+
+footer .arrow{top:0.5em; right:0em; visibility: visible;}
+
+
+
+/*nav a {
+	position: relative;
+	outline: none;
+	letter-spacing: 1px;
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+
+
+/* Effect 17: move up fade out, push border */
+/*.hover_animate a {
+	color: #ccc;
+	padding: 4px 0;
+}
+
+.hover_animate a::before {
+	color: #999;
+	content: attr(data-hover);
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.hover_animate a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background: #D6B035;
+	opacity: 0;
+
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.hover_animate a:hover::before,
+.hover_animate a:focus::before {
+	opacity: 0;
+	-webkit-transform: translateY(-2px);
+	-moz-transform: translateY(-2px);
+	transform: translateY(-2px);
+}
+
+.hover_animate a:hover::after,
+.hover_animate a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+	*/

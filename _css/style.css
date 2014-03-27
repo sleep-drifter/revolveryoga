@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	background-image:url(../_images/background.jpg);
+	background-repeat:repeat;
+	
+	/*100i,300i,400, 700*/
+}
+
+h2{
+	font-weight:700;
+	letter-spacing:1px;
+	font-size:2em;
+	text-transform:uppercase;
+	margin:0;
+	color:#D6B035;
+}
+
+
+
+
+p{
+	color: #424342;
+	font-weight:normal;
+	font-size:1.5em;
+	line-height:.75em;
+}
+a{
+	color:#424342;
+	font-size:1.5em;
+	line-height:0.75em;
+	text-decoration:none;
+	font-style:italic;
+}
+.shit{
+	border:red solid 1px;
+	background-color:red;
+}
+
+.hover{ -webkit-animation-name: rotate; 
+    -webkit-animation-duration: 2s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 2s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in;
+	
+}
+
+a:hover{
+	border-bottom: 2px solid #D6B035;
+	color: #ccc;
+	padding:2px;
+}
+
+section{
+	position:relative;
+	background-color:#fff;
+	max-width: 40em;
+	margin:0 auto;
+	text-align:center;
+	margin-top:7em;
+	padding: 2em;
+	background-image:url(../_images/bg_tile.jpg);
+	background-repeat:repeat;
+	-moz-box-shadow:     3px 3px 2em 0 #ccc;
+  	-webkit-box-shadow:  3px 3px 2em 0 #ccc;
+  	box-shadow:         3px 3px 2em 0 #ccc;
+	
+}
+
+img{
+	margin:0.5em;
+	max-width:100%;
+	height:auto;
+}
+
+footer{
+	position:absolute;
+	bottom: -40px;
+	right:10px;
+}
+
+footer p{
+	color:#bbb;
+	font-size:0.75em;
+}
+
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+
+
+@media screen and (max-width: 500px) {
+	
+body{
+	background-image:none;
+	background-color:#424342;
+}
+
+section{
+	width:100%;
+	padding:2em 0;
+	padding-bottom:5em;
+	position:relative;
+	margin-top:2em;
+		-moz-box-shadow:     3px 3px 2em 0 #555;
+  	-webkit-box-shadow:  3px 3px 2em 0 #555;
+  	box-shadow:         3px 3px 2em 0 #555;
+}
+
+p, a{
+	font-size:1em;
+}
+
+img:first-child{
+	width:75%;
+	margin:0 auto;
+}
+
+footer{
+	position:absolute;
+	bottom: 0px;
+	right:10px;
+}
+
+footer p{
+	display:inline-block;
+	font-size:0.75em;
+	color:#bbb;
+}
+	
